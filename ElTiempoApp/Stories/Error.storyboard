@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_0" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14283.14"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Error Connection View Controller-->
+        <scene sceneID="jd5-Kw-L9F">
+            <objects>
+                <viewController storyboardIdentifier="errorConnection" useStoryboardIdentifierAsRestorationIdentifier="YES" id="boW-8D-16n" customClass="ErrorConnectionViewController" customModule="ElTiempoApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9bL-TO-9jV">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please, connect your device to network and try again" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FE3-nh-4yg">
+                                <rect key="frame" x="20" y="261" width="280" height="46.5"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DQW-EA-iae">
+                                <rect key="frame" x="100" y="383" width="120" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="T6R-IA-dCP"/>
+                                    <constraint firstAttribute="width" constant="120" id="j5T-R2-kjN"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="AvenirNext-Heavy" family="Avenir Next" pointSize="13"/>
+                                <state key="normal" title="Try Again">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="tryAgainButton:" destination="boW-8D-16n" eventType="touchUpInside" id="KMA-tm-z9t"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="alertImage" translatesAutoresizingMaskIntoConstraints="NO" id="tqW-wR-GuS">
+                                <rect key="frame" x="90" y="91" width="140" height="128"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="140" id="FCZ-qW-3rX"/>
+                                    <constraint firstAttribute="height" constant="128" id="McE-jx-6DM"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="tqW-wR-GuS" firstAttribute="centerX" secondItem="9bL-TO-9jV" secondAttribute="centerX" id="9iS-VE-jWU"/>
+                            <constraint firstItem="DQW-EA-iae" firstAttribute="top" secondItem="FE3-nh-4yg" secondAttribute="bottom" constant="75.5" id="EWr-qj-08P"/>
+                            <constraint firstItem="DQW-EA-iae" firstAttribute="centerX" secondItem="9bL-TO-9jV" secondAttribute="centerX" id="LJt-X9-8U8"/>
+                            <constraint firstAttribute="trailing" secondItem="FE3-nh-4yg" secondAttribute="trailing" constant="20" id="RTY-Pm-2Sj"/>
+                            <constraint firstItem="FE3-nh-4yg" firstAttribute="centerY" secondItem="9bL-TO-9jV" secondAttribute="centerY" id="U91-Yd-GOb"/>
+                            <constraint firstItem="FE3-nh-4yg" firstAttribute="leading" secondItem="9bL-TO-9jV" secondAttribute="leading" constant="20" id="Vxt-Rt-ZGZ"/>
+                            <constraint firstItem="FE3-nh-4yg" firstAttribute="centerX" secondItem="9bL-TO-9jV" secondAttribute="centerX" id="ckU-wk-CI1"/>
+                            <constraint firstItem="FE3-nh-4yg" firstAttribute="top" secondItem="tqW-wR-GuS" secondAttribute="bottom" constant="42" id="y3A-F4-cSX"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="kX9-Mk-c8T"/>
+                    </view>
+                    <connections>
+                        <outlet property="tryAgainButtonOutlet" destination="DQW-EA-iae" id="dPc-f9-Meo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="WBF-xB-3Aq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="343.125" y="185.91549295774649"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="alertImage" width="402" height="360"/>
+    </resources>
+</document>
